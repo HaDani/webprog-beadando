@@ -46,7 +46,9 @@ valamint azok működését
  <li> ToDo-k megtekintése </li>
  <li> ToDo módosítása </li>
  <li> ToDo megjelölése elvégzettként </li>
- 
+
+![Használatieset-modell](docs/nomnoml.png)
+
  <h2> ToDo módosítása </h2>
  <ol>
  <li> Az oldalra érkezett vendég regisztrál, vagy bejelentkezik </li>
@@ -62,4 +64,3 @@ valamint azok működését
  </ul>
  </ol>
  
-![Használatieset-modell](docs/nomnoml.png)
