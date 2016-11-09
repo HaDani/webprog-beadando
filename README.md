@@ -37,6 +37,7 @@ valamint azok működését
  <li> Az oldalt megtekintheti, azonban mivel a funkciók csak bejelentkezés után érhetőek el, így nem tud ToDo-t létrehozni, módosítani </li>
  <li> Regisztráció </li>
  <li> Bejelentkezés </li>
+ </ul>
  
  <b> Bejelentkezett felhasználó: </b>
  <ul>
@@ -46,5 +47,19 @@ valamint azok működését
  <li> ToDo módosítása </li>
  <li> ToDo megjelölése elvégzettként </li>
  
+ <h2> ToDo módosítása </h2>
+ <ol>
+ <li> Az oldalra érkezett vendég regisztrál, vagy bejelentkezik </li>
+ <li> Amennyiben már regisztrált és adott hozzá tevékenységet, úgy a következőket teheti: </li>
+ <ul> 
+  <li> Megtekintheti az eddig hozzáadott ToDo-jait
+  <li> A ToDo neve melletti módosít gombra kattintva módosíthatja azt
+  <li> A ToDo neve melletti kész gombra kattintva elvégzettnek tekintheti az adott tevékenységet, mely ezáltal törlésre kerül
+ </ul>
+ <li> Amennyiben a módosít gombra kattintott úgy megjelenik számára a módosító felület, melyen átírhatja a ToDo nevét, leírását, valamint megváltoztathatja annak kategóriáját.
+ <li> Az új adatok bevitele után az elküld gombra kattintva a ToDo módosításai mentésre kerülnek
+ </ol>
+ </ul>
+ </ol>
  
 ![Használatieset-modell](docs/nomnoml.png)
