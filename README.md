@@ -27,3 +27,23 @@ valamint azok működését
 <li>Biztonságos működés</li>
 </ul>
 
+<h2> Szakterületi fogalomjegyzék: </h2>
+<b> ToDo: </b> Az elvégzendő tevékenység leírásá szolgál.
+
+<h2> Használatieset-modell, funkcionális követelmények </h2>
+
+<b> Vendég: </b> 
+<ul>
+ <li> Az oldalt megtekintheti, azonban mivel a funkciók csak bejelentkezés után érhetőek el, így nem tud ToDo-t létrehozni, módosítani </li>
+ <li> Regisztráció </li>
+ <li> Bejelentkezés </li>
+ 
+ <b> Bejelentkezett felhasználó: </b>
+ <ul>
+ <li> A publikus oldalakon kívül hozzáfér további opciókhoz is. </li>
+ <li> ToDo létrehozása </li>
+ <li> ToDo-k megtekintése </li>
+ <li> ToDo módosítása </li>
+ <li> ToDo megjelölése elvégzettként </li>
+ 
+ 
