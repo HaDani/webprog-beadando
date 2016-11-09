@@ -47,3 +47,4 @@ valamint azok működését
  <li> ToDo megjelölése elvégzettként </li>
  
  
+![Használatieset-modell](docs/nomnoml.png)
