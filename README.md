@@ -65,4 +65,16 @@ valamint azok működését
  </ol>
  
  ![ToDo módosítása diagram](docs/modifyToDo.png)
- 
+
+
+<h1>
+Tervezés
+</h1>
+
+<h2>
+Architektúra modell
+</h2>
+
+<h3> Komponens diagram </h3>
+
+![Komponens diagram](docs/dbmodell.png)
