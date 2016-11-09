@@ -64,3 +64,5 @@ valamint azok működését
  </ul>
  </ol>
  
+ ![ToDo módosítása diagram](docs/modifyToDo.png)
+ 
