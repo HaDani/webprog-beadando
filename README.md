@@ -78,3 +78,47 @@ Architektúra modell
 <h3> Komponens diagram </h3>
 
 ![Komponens diagram](docs/dbmodell.png)
+
+
+<h2>
+Oldaltérkép </h2>
+
+<b> Publikus: </b>
+<ul>
+ <li> Főoldal
+ <li> Regisztráció
+ <li> Bejelentkezés
+</ul>
+
+
+<b> Bejelentkezett: </b>
+<ul>
+ <li> Főoldal </li>
+ <li> ToDo-k megtekintése </li>
+ <ul>
+ <li> Új ToDo felvétele </li>
+ <li> ToDo módosítása </li>
+ <li> ToDó megjelölése kész-ként </li>
+ </ul>
+</ul>
+
+<h2>
+Végpontok </h2>
+<ul> 
+ <li> GET/: főoldal </li>
+ <li> GET/login: bejelentkező oldal </li>
+ <li> POST/login: bejelentkező adatok felküldése </li>
+ <li> GET/login/signup: regisztrációs oldal </li>
+ <li> POST/login/signup: regisztrációs adatok felküldése </li>
+ <li> GET/logout: kijelentkező oldal </li>
+ <li> GET/todos/create: Új ToDo felvétele </li>
+ <li> POST/todos/create: Új ToDo felvételehéz adatok felküldése </li>
+ <li> GET/showmytodos: ToDo-k megjelenítése</li>
+ <li> GET/:id/: ToDo megtekintése </li>
+ <li> GET/:id/modify: ToDo módosítása </li>
+ <li> POST/:id/modify: ToDo módosítása adatok felküldése </li>
+ <li> GET/:id/markAsComplete: ToDo megjelölése kész-ként </li>
+
+
+</ul>
+
