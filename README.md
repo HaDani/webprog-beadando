@@ -133,7 +133,8 @@ Végpontok </h2>
  <li> GET/profile/:id: Felhasználó profiljának megtekintése</li>
  <li> POST/profile/:id: Felhasználó profiljának módosításához adatok felküldése</li>
  <li> GET/profile/:id/delete:  Felhasználó profiljának törlése</li>
-
-
 </ul>
+
+<h2>Drótvázterv </h2>
+![MainPage](docs/todoBeadMainPage.png)
 
