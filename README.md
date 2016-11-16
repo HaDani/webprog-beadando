@@ -118,6 +118,21 @@ Végpontok </h2>
  <li> GET/:id/modify: ToDo módosítása </li>
  <li> POST/:id/modify: ToDo módosítása adatok felküldése </li>
  <li> GET/:id/markAsComplete: ToDo megjelölése kész-ként </li>
+ <li> GET/todos/todoNotFound: Annak jelzésére, ha a kért ToDo nem található </li>
+ <li> GET/register: Felhasználó regisztrálása</li>
+ <li> POST/register: Felhasználó regisztrálásához adatok felküldése </li>
+ <li> GET/login: Felhasználó bejelentkeztetése</li>
+ <li> POST/login: Felhasználó bejelentkeztetéséhez adatok felküldése</li>
+ <li> POST/logout: Felhasználó kijelentkeztetéséhez adatok felküldése)</li>
+ <li> GET/accessDenied: Annak jelzésére, ha az adott felhasználónak nincs joga)</li>
+ <li> GET/todos/:id/comment: Megjegyzés írása</li>
+ <li> POST/todos/:id/comment: Megjegyzés írásához adatok felküldése</li>
+ <li> GET/comments/:id/delete: Megjegyzés törlése</li>
+ <li> GET/comments/:id/modify: Megjegyzés módosítása</li>
+ <li> POST/comments/:id/modify: Megjegyzés módosításához adatok felküldése</li>
+ <li> GET/profile/:id: Felhasználó profiljának megtekintése</li>
+ <li> POST/profile/:id: Felhasználó profiljának módosításához adatok felküldése</li>
+ <li> GET/profile/:id/delete:  Felhasználó profiljának törlése</li>
 
 
 </ul>
