@@ -165,3 +165,5 @@ Végpontok </h2>
 </h3>Profil megtekintése</h3>
 ![Profil megtekintése](docs/modProfile.png)
 <br>
+
+<h2>Dizájntervek </h2>
