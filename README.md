@@ -143,5 +143,24 @@ Végpontok </h2>
 </ul>
 
 <h2>Drótvázterv </h2>
+</h3>Főoldal</h3>
 ![MainPage](docs/todoBeadMainPage.png)
-
+<br>
+</h3>Regisztrációs oldal</h3>
+![Regisztrációs oldal](docs/regSite.png)
+</h3>Bejelentkezési oldal</h3>
+![Bejelentkezési oldal](docs/logSite.png)
+</h3>Új ToDo hozzáadása oldal</h3>
+![Új ToDo](docs/newToDo.png)
+</h3>ToDo módosítása oldal</h3>
+![ToDo módosítása](docs/modToDo.png)
+</h3>ToDo-im megtekintése</h3>
+![ToDo-k megtekintése](docs/myToDos.png)
+</h3>ToDo megtekintése</h3>
+![ToDo megtekintése](docs/showToDo.png)
+</h3>Komment hozzáadása</h3>
+![Komment hozzáadása](docs/addComment.png)
+</h3>Tag hozzáadása</h3>
+![Tag hozzáadása](docs/addMember.png)
+</h3>Profil megtekintése</h3>
+![Profil megtekintése](docs/modProfile.png)
