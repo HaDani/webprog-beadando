@@ -133,6 +133,13 @@ Végpontok </h2>
  <li> GET/profile/:id: Felhasználó profiljának megtekintése</li>
  <li> POST/profile/:id: Felhasználó profiljának módosításához adatok felküldése</li>
  <li> GET/profile/:id/delete:  Felhasználó profiljának törlése</li>
+ <li> GET/comments/:id/modify: Megjegyzés módosítása <li>
+ <li> POST/comments/:id/modify: Megjegyzés módosításához adatok felküldése<li>
+ <li> GET/profile/:id: Felhasználó profiljának megtekintése <li>
+ <li> POST/profile/:id: Felhasználó profiljának megtekintése és módosítása<li>
+ <li> GET/profile/:id/delete: Felhasználó törlése<li>
+ <li> GET/todos/:id/addNewMember: Új felhasználó hozzáadása a ToDo-hoz<li>
+ <li> POST/todos/:id/addNewMember: Új felhasználó hozzáadása a ToDo-hoz - adatok felküldése <li>
 </ul>
 
 <h2>Drótvázterv </h2>
