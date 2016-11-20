@@ -290,17 +290,17 @@ ToDoBead
 <b> Program használata: </b> <br>
 
 <ol type="1">
-<li> Böngészőben nyissuk meg a főoldalt </li>
-<li> Regisztráljunk az oldalon, amennyiben azt még nem tettük meg - jobb felső sarokban levő regisztráció gombra kattintva</li>
-<li> Amennyiben már regisztráltunk és még nem vagyunk bejelentkezve, úgy jelentkezzünk be a Bejelentkezés gombra kattintva </li>
-<li> Bejelentkezés után az Új ToDo gombra kattintva tudunk új feladatot létrehozni </li>
-<li> Töltsük ki a ToDo jellemzőit </li>
-<li> Hiba esetén az oldal jelezni fogja azt </li>
-<li> Mentsük el a ToDo-t </li>
-<li> A saját ToDo-im oldalon megjelennek a már létrehozott ToDo-k, valamint a mások által megosztottak is </li>
-<li> A ToDo nevére kattintva tudjuk megtekinteni az egyes ToDo-kat </li>
-<li> Kész gombbal tudunk törölni egy-egy ToDo-t </li>
-<li> Módosít gombbal tudunk módosítani egy-egy ToDo-t </li>
-<li> ToDo megtekintése oldalon az új megjegyzés hozzáadása gombra kattintva tudunk új megjegyzést hozzáadni </li>
-<li> Az "Új tag hozzáadása" gombra kattintva egy új tagot tudunk hozzáadni a ToDo-nkhoz akivel meg szeretnénk osztani azt </li>
+<li> 1. Böngészőben nyissuk meg a főoldalt </li>
+<li> 2. Regisztráljunk az oldalon, amennyiben azt még nem tettük meg - jobb felső sarokban levő regisztráció gombra kattintva</li>
+<li> 3. Amennyiben már regisztráltunk és még nem vagyunk bejelentkezve, úgy jelentkezzünk be a Bejelentkezés gombra kattintva </li>
+<li> 4.Bejelentkezés után az Új ToDo gombra kattintva tudunk új feladatot létrehozni </li>
+<li> 5. Töltsük ki a ToDo jellemzőit </li>
+<li> 6. Hiba esetén az oldal jelezni fogja azt </li>
+<li> 7. Mentsük el a ToDo-t </li>
+<li> 8. A saját ToDo-im oldalon megjelennek a már létrehozott ToDo-k, valamint a mások által megosztottak is </li>
+<li> 9. A ToDo nevére kattintva tudjuk megtekinteni az egyes ToDo-kat </li>
+<li> 10. Kész gombbal tudunk törölni egy-egy ToDo-t </li>
+<li> 11. Módosít gombbal tudunk módosítani egy-egy ToDo-t </li>
+<li> 12. ToDo megtekintése oldalon az új megjegyzés hozzáadása gombra kattintva tudunk új megjegyzést hozzáadni </li>
+<li> 13. Az "Új tag hozzáadása" gombra kattintva egy új tagot tudunk hozzáadni a ToDo-nkhoz akivel meg szeretnénk osztani azt </li>
 </ol>
