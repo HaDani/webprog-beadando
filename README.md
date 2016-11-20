@@ -47,7 +47,7 @@ valamint azok működését
  <li> ToDo módosítása </li>
  <li> ToDo megjelölése elvégzettként </li>
 
-![Használatieset-modell](docs/nomnoml.png)
+![Használati-eset modell](docs/nomnoml.png)
 
  <h2> ToDo módosítása </h2>
  <ol>
@@ -106,18 +106,13 @@ Oldaltérkép </h2>
 Végpontok </h2>
 <ul> 
  <li> GET/: főoldal </li>
- <li> GET/login: bejelentkező oldal </li>
- <li> POST/login: bejelentkező adatok felküldése </li>
- <li> GET/login/signup: regisztrációs oldal </li>
- <li> POST/login/signup: regisztrációs adatok felküldése </li>
- <li> GET/logout: kijelentkező oldal </li>
  <li> GET/todos/create: Új ToDo felvétele </li>
  <li> POST/todos/create: Új ToDo felvételehéz adatok felküldése </li>
  <li> GET/showmytodos: ToDo-k megjelenítése</li>
  <li> GET/:id/: ToDo megtekintése </li>
- <li> GET/:id/modify: ToDo módosítása </li>
- <li> POST/:id/modify: ToDo módosítása adatok felküldése </li>
- <li> GET/:id/markAsComplete: ToDo megjelölése kész-ként </li>
+ <li> GET/todos/:id/modify: ToDo módosítása </li>
+ <li> POST/todos/:id/modify: ToDo módosítása adatok felküldése </li>
+ <li> GET/todos/:id/markAsComplete: ToDo megjelölése kész-ként </li>
  <li> GET/todos/todoNotFound: Annak jelzésére, ha a kért ToDo nem található </li>
  <li> GET/register: Felhasználó regisztrálása</li>
  <li> POST/register: Felhasználó regisztrálásához adatok felküldése </li>
