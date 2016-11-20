@@ -289,7 +289,6 @@ ToDoBead
 
 <b> Program használata: </b> <br>
 
-<ol type="1">
 <li> 1. Böngészőben nyissuk meg a főoldalt </li>
 <li> 2. Regisztráljunk az oldalon, amennyiben azt még nem tettük meg - jobb felső sarokban levő regisztráció gombra kattintva</li>
 <li> 3. Amennyiben már regisztráltunk és még nem vagyunk bejelentkezve, úgy jelentkezzünk be a Bejelentkezés gombra kattintva </li>
@@ -303,4 +302,4 @@ ToDoBead
 <li> 11. Módosít gombbal tudunk módosítani egy-egy ToDo-t </li>
 <li> 12. ToDo megtekintése oldalon az új megjegyzés hozzáadása gombra kattintva tudunk új megjegyzést hozzáadni </li>
 <li> 13. Az "Új tag hozzáadása" gombra kattintva egy új tagot tudunk hozzáadni a ToDo-nkhoz akivel meg szeretnénk osztani azt </li>
-</ol>
+
