@@ -48,7 +48,7 @@ valamint azok működését
  <li> ToDo megjelölése elvégzettként </li>
  </ul>
 
-![Használati-eset modell](docs/nomnoml.png)
+![Használati-eset modell](docs/h_emodell.png)
 
  <h2> ToDo módosítása </h2>
  <ol>
@@ -65,7 +65,7 @@ valamint azok működését
  </ul>
  </ol>
  
- ![ToDo módosítása diagram](docs/modifyToDo.png)
+ ![ToDo módosítása diagram](docs/modell.png)
 
 
 <h1>
