@@ -288,6 +288,7 @@ ToDoBead
 <b> Egyéb követelmények: </b> Internet böngésző <br>
 
 <b> Program használata: </b> <br>
+
 <ol type="1">
 <li> Böngészőben nyissuk meg a főoldalt </li>
 <li> Regisztráljunk az oldalon, amennyiben azt még nem tettük meg - jobb felső sarokban levő regisztráció gombra kattintva</li>
