@@ -193,4 +193,88 @@ Végpontok </h2>
 
 <h2> Szekvenciadiagram </h2>
 <h3>Például: Regisztráció, új ToDO, szerkesztés, törlés</h3>
-![Szekvenciadiagram](docs/szekvenciadiagram.png)<br>
+![Szekvenciadiagram](docs/szekvenciadiagram.png)<br>ű
+
+
+<h1> Implementáció </h1>
+
+<h3> Fejlesztőkörnyezet: Visual Studio Code </h3>
+<ul>
+<li> Szükséges függőséges telepítése után elkezdhetjük a kód írását </li>
+<li> A commitolás github-ra is a Visual Studio Code-ban történik a Git ikonra kattintva stage-elni majd push-olni kell az egyes változtatásokat
+
+<h3> Könyvtárstruktúra </h3>
+ToDoBead
+<ul>
+<li>
+ controllers
+  <ul>
+  <li>UserController.js</li>
+    <li>ToDoController.js</li>
+      <li>CommentController.js</li>
+  </ul>
+ </li>
+ 
+ <li>
+ models
+  <ul>
+  <li>Category.js</li>
+    <li>Comment.js</li>
+      <li>Family.js</li>
+        <li>ToDo.js</li>
+    <li>Token.js</li>
+      <li>User.js</li>
+  </ul>
+ </li>
+  <li>
+ views(.njk (nunjucks) fájlok)
+  <ul>
+  <li>accessDenied.njk</li>
+    <li>addFamilyMember.njk</li>
+      <li>createToDo.njk</li>
+        <li>layout.njk</li>
+    <li>login.njk</li>
+      <li>main.njk</li>
+          <li>master.njk</li>
+      <li>modifyComment.njk</li>
+        <li>modifyToDo.njk</li>
+    <li>register.njk</li>
+      <li>showMyToDos.njk</li>
+                <li>showSharedToDo.njk</li>
+      <li>showToDo.njk</li>
+        <li>showUser.njk</li>
+    <li>todoNotFound.njk</li>
+      <li>welcome.njk</li>
+            <li>writeComment.njk</li>
+  </ul>
+    <li>
+ views(.njk (nunjucks) fájlok)
+  <ul>
+  <li>accessDenied.njk</li>
+    <li>addFamilyMember.njk</li>
+      <li>createToDo.njk</li>
+        <li>layout.njk</li>
+    <li>login.njk</li>
+      <li>main.njk</li>
+          <li>master.njk</li>
+      <li>modifyComment.njk</li>
+        <li>modifyToDo.njk</li>
+    <li>register.njk</li>
+      <li>showMyToDos.njk</li>
+                <li>showSharedToDo.njk</li>
+      <li>showToDo.njk</li>
+        <li>showUser.njk</li>
+    <li>todoNotFound.njk</li>
+      <li>welcome.njk</li>
+            <li>writeComment.njk</li>
+  </ul>
+  <li>
+   server.js
+  </li>
+    <li>
+   package.json
+  </li>
+
+  
+ </li>
+ </ul>
