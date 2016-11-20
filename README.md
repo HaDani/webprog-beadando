@@ -303,3 +303,8 @@ ToDoBead
 <li> 12. ToDo megtekintése oldalon az új megjegyzés hozzáadása gombra kattintva tudunk új megjegyzést hozzáadni </li>
 <li> 13. Az "Új tag hozzáadása" gombra kattintva egy új tagot tudunk hozzáadni a ToDo-nkhoz akivel meg szeretnénk osztani azt </li>
 
+
+<h1> Irodalomjegyzék: </h1>
+<ul>
+<a href="http://webprogramozas.inf.elte.hu/alkfejl.php"> A Tárgy honlapja </a>
+</ul>
