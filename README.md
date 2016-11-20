@@ -77,7 +77,6 @@ Tervezés
 Architektúra modell
 </h2>
 
-![Használati-eset modell](docs/h_emodell.png)
 
 <h3> Komponens diagram </h3>
 
