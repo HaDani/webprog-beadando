@@ -278,31 +278,29 @@
     
    </li>
    </ul>
- +
- +
- +
- +<h1> Felhasználói dokumentáció </h1>
- +
- +<b> Futtatáshoz szükséges operációs rendszer:  </b>Tetszőleges operációs rendszer <br>
- +<b> A futtatáshoz szükséges hardver: </b> Operációs rendszerek szerint megadva <br>
- +<b> Egyéb követelmények: </b> Internet böngésző <br>
- +
- +<b> Program használata: </b> <br>
- +<ol>
- +<li> Böngészőben nyissuk meg a főoldalt </li>
- +<li> Regisztráljunk az oldalon, amennyiben azt még nem tettük meg - jobb felső sarokban levő regisztráció gombra kattintva</li>
- +<li> Amennyiben már regisztráltunk és még nem vagyunk bejelentkezve, úgy jelentkezzünk be a Bejelentkezés gombra kattintva </li>
- +<li> Bejelentkezés után az Új ToDo gombra kattintva tudunk új feladatot létrehozni </li>
- +<li> Töltsük ki a ToDo jellemzőit </li>
- +<li> Hiba esetén az oldal jelezni fogja azt </li>
- +<li> Mentsük el a ToDo-t </li>
- +<li> A saját ToDo-im oldalon megjelennek a már létrehozott ToDo-k, valamint a mások által megosztottak is </li>
- +<li> A ToDo nevére kattintva tudjuk megtekinteni az egyes ToDo-kat </li>
- +<li> Kész gombbal tudunk törölni egy-egy ToDo-t </li>
- +<li> Módosít gombbal tudunk módosítani egy-egy ToDo-t </li>
- +<li> ToDo megtekintése oldalon az új megjegyzés hozzáadása gombra kattintva tudunk új megjegyzést hozzáadni </li>
- +<li> Az "Új tag hozzáadása" gombra kattintva egy új tagot tudunk hozzáadni a ToDo-nkhoz akivel meg szeretnénk osztani azt </li>
- +</ol>
+
+<h1> Felhasználói dokumentáció </h1>
+
+<b> Futtatáshoz szükséges operációs rendszer:  </b>Tetszőleges operációs rendszer <br>
+<b> A futtatáshoz szükséges hardver: </b> Operációs rendszerek szerint megadva <br>
+<b> Egyéb követelmények: </b> Internet böngésző <br>
+
+<b> Program használata: </b> <br>
+<ol>
+<li> Böngészőben nyissuk meg a főoldalt </li>
+<li> Regisztráljunk az oldalon, amennyiben azt még nem tettük meg - jobb felső sarokban levő regisztráció gombra kattintva</li>
+<li> Amennyiben már regisztráltunk és még nem vagyunk bejelentkezve, úgy jelentkezzünk be a Bejelentkezés gombra kattintva </li>
+<li> Bejelentkezés után az Új ToDo gombra kattintva tudunk új feladatot létrehozni </li>
+<li> Töltsük ki a ToDo jellemzőit </li>
+<li> Hiba esetén az oldal jelezni fogja azt </li>
+<li> Mentsük el a ToDo-t </li>
+<li> A saját ToDo-im oldalon megjelennek a már létrehozott ToDo-k, valamint a mások által megosztottak is </li>
+<li> A ToDo nevére kattintva tudjuk megtekinteni az egyes ToDo-kat </li>
+<li> Kész gombbal tudunk törölni egy-egy ToDo-t </li>
+<li> Módosít gombbal tudunk módosítani egy-egy ToDo-t </li>
+<li> ToDo megtekintése oldalon az új megjegyzés hozzáadása gombra kattintva tudunk új megjegyzést hozzáadni </li>
+<li> Az "Új tag hozzáadása" gombra kattintva egy új tagot tudunk hozzáadni a ToDo-nkhoz akivel meg szeretnénk osztani azt </li>
+</ol>
 
 
 
