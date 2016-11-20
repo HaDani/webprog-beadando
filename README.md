@@ -46,6 +46,7 @@ valamint azok működését
  <li> ToDo-k megtekintése </li>
  <li> ToDo módosítása </li>
  <li> ToDo megjelölése elvégzettként </li>
+ </ul>
 
 ![Használati-eset modell](docs/nomnoml.png)
 
