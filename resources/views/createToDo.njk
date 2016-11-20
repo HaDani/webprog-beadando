@@ -1,0 +1,98 @@
+{% extends 'layout' %}
+
+{% block content %}
+
+    <h2>
+        Új ToDo hozzáadása
+    </h2>
+
+    {% if old('errors') %}
+        
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">Hibalista</h3>
+  </div>
+  <div class="panel-body">
+    <ul>
+            {% for error in old('errors') %}
+            <li>{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+  </div>
+</div>
+    {% endif %}
+
+    <form class="form-horizontal" action="" method="POST">
+        {{ csrfField }}
+    <div class="form-group">
+      <label for="name" class="col-lg-2 control-label">ToDo neve:</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="name" name="name" placeholder="Név" value="{{ old('name') }}">
+        <span class="help-block">Ez a mező nem lehet üres</span>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description" class="col-lg-2 control-label">Leírás</label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="description" name="description"  value="{{ old('description') }}"></textarea>
+        
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="category_id" class="col-lg-2 control-label">Kategória</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="category_id" name="category_id">
+          {% for category in categories %}
+          <option value="{{ category.id }}"
+            {%if category.id == old('category_id') %}
+            selected
+            {% endif %}
+            > {{ category.name }} </option>
+          {% endfor %}
+        </select>
+        <br>
+      </div>
+    </div>
+
+    <div class="form-group">
+    <td>
+      <label class="col-lg-2 control-label">Határidő</label>
+      </td>
+    <div class="col-lg-10">
+      <table>
+      <tr>
+      
+    
+
+      <td>
+        <label for="year_date" class="col-lg-2 control-label"> Év </label>
+      </td>
+      <td>
+        <input type="number" class="form-control" id="year_date" name="year_date"  value="{{ old('year_date') }}"></input>
+      </td>
+      <td>
+        <label for="month_date" class="col-lg-2 control-label"> Hónap </label>
+      </td>
+      <td>
+        <input type="number" class="form-control" id="month_date" name="month_date"  value="{{ old('month_date') }}"></input>
+      </td>
+      <td>
+        <label for="day_date" class="col-lg-2 control-label"> Nap </label>
+      </td>
+      <td>
+        <input type="number" class="form-control" id="day_date" name="day_date"  value="{{ old('day_date') }}"></input>
+      </td>
+        </tr>
+      </table>
+      </div>
+    </div>
+  
+    <br>
+    <div class="form-group" style="padding:auto; margin:auto; text-align:center;">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Mégse</button>
+        <button type="submit" class="btn btn-primary">Elküld</button>
+      </div>
+    </div>
+</form>
+{% endblock %}

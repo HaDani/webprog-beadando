@@ -1,0 +1,44 @@
+{% extends 'layout' %}
+
+{% block content %}
+
+    <h2>
+        Komment módosítása
+    </h2>
+
+    {% if old('errors') %}
+        
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">Hibalista</h3>
+  </div>
+  <div class="panel-body">
+    <ul>
+            {% for error in old('errors') %}
+            <li>{{ error.message }}</li>
+            {% endfor %}
+        </ul>
+  </div>
+</div>
+    {% endif %}
+
+    <form class="form-horizontal" action="" method="POST">
+        {{ csrfField }}
+    <div class="form-group">
+      <label for="description" class="col-lg-2 control-label">Megjegyzés: </label>
+      <div class="col-lg-10">
+        <textarea class="form-control" rows="3" id="text" name="text"  value="{{ comment.text }}">{{ comment.text }}</textarea>
+        
+      </div>
+    </div>
+
+    <br>
+
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default">Mégse</button>
+        <button type="submit" class="btn btn-primary">Elküld</button>
+      </div>
+    </div>
+</form>
+{% endblock %}
