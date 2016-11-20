@@ -189,3 +189,10 @@ Végpontok </h2>
 </h3>Profil megtekintése</h3>
 ![Profil megtekintése](docs/modProfileV.png)
 <br>
+
+<h2> Adatmodell </h2>
+![Adatmodell](docs/adatModell1.png)<br>
+
+<h2> Szekvenciadiagram </h2>
+<h3>Például: Regisztráció, új ToDO, szerkesztés, törlés</h3>
+![Szekvenciadiagram](docs/szekvenciadiagram.png)<br>
