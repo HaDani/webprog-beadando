@@ -48,6 +48,7 @@ valamint azok működését
  <li> ToDo megjelölése elvégzettként </li>
  </ul>
 
+
 ![Használati-eset modell](docs/h_emodell.png)
 
  <h2> ToDo módosítása </h2>
