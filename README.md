@@ -305,15 +305,6 @@
 </ol>
 
 
-   
-<h1> Tesztelés </h1>
-A program tesztelésére a Selenium IDE Firefox kiegészítőt használtam:
-Telepítése:
-A Firefox böngésző kiegészítőjeként letöltjük a Selenium IDE-t.
-Miután a letöltés és telepítés megtörtént a fejlesztői panelen (Firefox -> Menü megnyitása -> Fejlesztő -> Selenium IDE) kiválasztjuk a Selenium IDE-t. 
-Majd indulás után a Fájl menüben új tesztesetet hozunk létre (New Test Case).
-Ezután a jobb oldali piros körre (record) kattintva elkezdhetjük a tesztelést. Az egyes teszteseteket amiket kézzel elvégzünk, a program felveszi a saját esetei közé, majd ezeket le lehet futtatni a zöld lejátszás (Play entire test suite - Play current test suite) gombokkal.
-A tesztesetek elmentése megtörténhet külön-külön vagy egyben is egy "suite"-ként.
 
 
 
@@ -364,14 +355,107 @@ A tesztesetek elmentése megtörténhet külön-külön vagy egyben is egy "suit
   <p> Amikor a felhasználó a saját ToDo-it megjelenítő oldalon egy kategória nevére kattint, úgy lenyithatja/becsukhatja az adott kategóriát, ha arra éppen nincs szüksége. Névre kattintáskor meghívódik a showMyTodos.js fájl kódja, mely megkapja az adott panelt, és megkeresi a hozzá tartozó lista elemeket. Ezeket kattintásra eltünteti, vagy megmutatja. </p>
   
   <code>
-  
   $headings.on('click', function (e) {
     const $ul = $(this).next()
     $ul.slideToggle()
-});
-  </code>
+}); </code>
 
 
+<b> Felhasználó adatainak módosítása AJAX-szal</b>
+ <h4> Érintett fájlok: </h4>
+  <ul>
+  <li> layout.njk </li>
+  <li> popup_profile.js </li>
+  <li> UserController.js </li>
+  <li> showMyTodos.njk </li>
+  </ul>
+  
+  <h4> Működése: </h4>
+  <p> Amikor a felhasználó a saját ToDo-it megjelenítő oldalon a Fiók gombra kattint (jobb felső sarok), úgy megtekintheti a saját profiljához tartozó adatokat és módosíthatja azokat.  A Fiók gombra kattintva a popup_profile.js fájlban levő ajax hívás megtörténik, mely lekéri a felhasználó id-jét a szerverről (UserController.js fájl - <i>ajaxProfile</i> metódus) , majd ha ez sikerült, akkor a "then" ágon megtörténik a felugró ablak megnyitása a felhasználónév, e-mail, vezetéknév, keresztnév, és jelszó mezőkkel. Ezeket miután a felhasználó módosítja a "Mentés" gombra kattintva elmentheti az adatokat. Ekkor lefut még egy ajax függvény mely módosítja az adatbázisban a paramétereket és visszaadja a felhasználó által megadott úgy vezeték- és keresztnevet. Ezeket a popup_profile.js fájl javascript segítéségvel megjeníti az oldalon a jobb felső sarokban a felhasználónak. </p>
+  
+  <code>
+ $('#userNameLI').text("Üdv, " + json.lName + " " + json.fName + "!");
+}); </code>
+
+
+
+<b> ToDo adatainak módosítása AJAX-szal</b>
+ <h4> Érintett fájlok: </h4>
+  <ul>
+  <li> layout.njk </li>
+  <li> showToDo.njk </li>
+  <li> showMyTodos.njk </li>
+  <li> ToDoController.js </li>
+  </ul>
+  
+  <h4> Működése: </h4>
+  <p> A ToDo kiválasztása után a megtekintéskor a Módosít gombra (id: btnModifyToDo) kattintva a felhasználó egy popup ablakban módosíthatja a todo adatait, melyeket egy ajax kéréssel (ToDoController.js - ajaxModifyToDo metódus) a szervernek is átad. Amennyiben a módosítás sikeres volt, úgy visszakapja a az egyes adatokat, és megjeleníti azokat a ToDo megfelelői mezőiben. </p>
+  
+  <b> ToDo kész-nek jelölése (törlése) AJAX-szal</b>
+ <h4> Érintett fájlok: </h4>
+  <ul>
+  <li> showToDo.njk </li>
+  <li> ToDoController.js </li>
+    <li> todoDelete.js </li>
+  </ul>
+  
+  <h4> Működése: </h4>
+  <p> A ToDo kiválasztása után a megtekintéskor a Kész gombra (id: btnDelete) kattintva a felhasználó egy popup ablakban megerősítheti, hogy törölni szeretné a ToDo-t. Amennyiben szeretné, úgy lefut egy ajax kérés a megfelő végpontra (<code>'/ajax' + $(this).attr('href')</code>), meghívódik a ToDoController.js - ajaxDelete metódusa, mely törli a ToDo-t. Ha sikeres volt a törlés, akkor a felhasználót visszairányítja a saját ToDo-ihoz. </p>
+  
+  
+    <b> ToDo megjegyzés írása AJAX-szal</b>
+ <h4> Érintett fájlok: </h4>
+  <ul>
+  <li> showToDo.njk </li>
+  <li> ToDoController.js </li>
+    <li> popup_comment.js </li>
+  </ul>
+  
+  <h4> Működése: </h4>
+  <p> A ToDo kiválasztása után a megtekintéskor az <i> Új megjegyzés (Saját)</i> gombra (id: btnComment) kattintva a felhasználó egy popup ablakban megadhatja a megjegyzést, amit saját magának szeretne megjeleníteni (popup_comment.js). Ezután lefut egy ajax kérés a megfelő végpontra (<code>'/ajax/todos/'+currID+'/comment'</code>), meghívódik a ToDoController.js - ajaxComment metódusa, mely elküldi a szervernek a megjegyzést. Ha sikeres volt, akkor a felhasználónak a megjegyzések között azonnal megjelenik a saját megjegyzése, mert a popup_comment.js fájl ajax kérésének teljesülése során beszúrja azt a megjegyzés táblázatba. </p>
+
+   
+<h1> Tesztelés </h1>
+A program tesztelésére a Selenium IDE Firefox kiegészítőt használtam:
+Telepítése:
+A Firefox böngésző kiegészítőjeként letöltjük a Selenium IDE-t.
+Miután a letöltés és telepítés megtörtént a fejlesztői panelen (Firefox -> Menü megnyitása -> Fejlesztő -> Selenium IDE) kiválasztjuk a Selenium IDE-t. 
+Majd indulás után a Fájl menüben új tesztesetet hozunk létre (New Test Case).
+Ezután a jobb oldali piros körre (record) kattintva elkezdhetjük a tesztelést. Az egyes teszteseteket amiket kézzel elvégzünk, a program felveszi a saját esetei közé, majd ezeket le lehet futtatni a zöld lejátszás (Play entire test suite - Play current test suite) gombokkal.
+A tesztesetek elmentése megtörténhet külön-külön vagy egyben is egy "suite"-ként.
+
+
+A tesztesetek:
+ - registerUser:
+   Új felhasználó létrehozása -> Adatok megadása -> Főoldal
+ - deleteUser:
+   Felhasználó törlése -> Fiók gomb -> Fiók törlése
+ - login:
+   Felhasználó bejelentkeztetése -> Bejelentkezés -> E-mail és jelszó megadása
+ - modifyProfile:
+   Profil adatok módosítása -> Jelzett név leellenőrzése -> Fiók gomb -> Név átírása -> Jelzett név leellenőrzése
+ - createNewTodo:
+   Új ToDo létrehozása -> Új ToDo gomb -> Adatok megadása -> Leellenőrizni, hogy megfelelő adatokkal, létrejött-e a ToDo
+ - deleteToDo:
+   ToDo törlése -> ToDo megnyitása -> Kész gomb -> Törlés megerősítése
+ - modifyToDo:
+   ToDo módosítása -> ToDo megnyitása -> Módosít -> Adatok megadása -> Megerősítés -> Ellenőrzés, hogy tényleg a megadott adatok jelennek-e meg
+ - reModifyToDo:
+   ToDo módoításának vissza állítása
+ - showToDo:
+   ToDo megjelenítése -> ToDo nevére kattintás -> Adatok megjelenésének ellenőrzése
+ - writeComment:
+   Megjegyzés írása ToDo-hoz -> ToDo megjelenítése -> Saját megjegyzés -> Megjegyzés írása
+ - deleteComment:
+   Komment törlése
+ - shareToDo:
+   ToDo megosztása másik felhasználóval -> ToDo megjelenítése -> Megosztás -> E-mail megadása -> Másik felhasználónál is megjelenik-e ellenőrzése
+ - slideCategories:
+   Kategóriák elrejtése, megjelenítése
+
+
+
+<
 
 # AdonisJs Application
 
