@@ -193,7 +193,7 @@
  
  <h2> Szekvenciadiagram </h2>
  <h3>Például: Regisztráció, új ToDO, szerkesztés, törlés</h3>
- ![Szekvenciadiagram](docs/szekvenciadiagram.png)<br>ű
+ ![Szekvenciadiagram](docs/szekvenciadiagram.png)<br>
  
  
  <h1> Implementáció </h1>
@@ -279,6 +279,8 @@
    </li>
    </ul>
 
+
+
 <h1> Felhasználói dokumentáció </h1>
 
 <b> Futtatáshoz szükséges operációs rendszer:  </b>Tetszőleges operációs rendszer <br>
@@ -302,6 +304,72 @@
 <li> Az "Új tag hozzáadása" gombra kattintva egy új tagot tudunk hozzáadni a ToDo-nkhoz akivel meg szeretnénk osztani azt </li>
 </ol>
 
+
+   
+<h1> Tesztelés </h1>
+A program tesztelésére a Selenium IDE Firefox kiegészítőt használtam:
+Telepítése:
+A Firefox böngésző kiegészítőjeként letöltjük a Selenium IDE-t.
+Miután a letöltés és telepítés megtörtént a fejlesztői panelen (Firefox -> Menü megnyitása -> Fejlesztő -> Selenium IDE) kiválasztjuk a Selenium IDE-t. 
+Majd indulás után a Fájl menüben új tesztesetet hozunk létre (New Test Case).
+Ezután a jobb oldali piros körre (record) kattintva elkezdhetjük a tesztelést. Az egyes teszteseteket amiket kézzel elvégzünk, a program felveszi a saját esetei közé, majd ezeket le lehet futtatni a zöld lejátszás (Play entire test suite - Play current test suite) gombokkal.
+A tesztesetek elmentése megtörténhet külön-külön vagy egyben is egy "suite"-ként.
+
+
+
+<h1> Kliens oldali funkciók fejlesztése </h1>
+
+<h2> Az érintett fájlok </h2>
+<ul>
+ <li> modify_todo.js </li>
+  <li> popup_comment.js </li>
+   <li> popup_login.js </li>
+    <li> popup_profile.js </li>
+     <li> showMyToDos.js </li>
+     <li> todoDelete.js </li>
+</ul>
+
+
+<h2> Fentiek mellett a következő fájlok lettek módosítva: (pl. id-k hozzáadása, script fájl referencia beszúrása) </h2>
+<ul>
+ <li> showMyTodos.njk </li>
+ <li> showToDo.njk </li>
+ <li> showUser.njk </li>
+ <li> layout.njk </li>
+ <li> main.njk </li>
+</ul>
+
+<h2>Az egyes Javascriptes/Ajax funckciók leírása:</h2>
+<b> Ajax-os login megvalósítása: </b>
+ <h4> Érintett fájlok: </h4>
+  <ul>
+  <li> layout.njk </li>
+  <li> popup_login.js </li>
+  <li> UserController.js </li>
+  </ul>
+  
+  <h4> Működése: </h4>
+  <p> Amikor a felhasználó a főoldalon a bejelentkezés gombra kattint (id: btnLogin) (zöld bejelentkezés) egy pop-up ablak jelenik meg, mely kéri a felhasználó e-mail címét és jelszavát a bejelentkezéshez. Miután a felhasználó ezeket megadta, lefut egy ajax-os kérés a szerverhez, mely ellenőrzi, hogy megfelelőek-e az adatok. (<i> Route.post('/login', 'UserController.ajaxLogin'); </i>)
+  Amennyiben igen, úgy belépteti a felhasználót, és egy success változót ad vissza a hívó függvénynek (popup_login.js fájl-beli onClick), majd átirányítja a felhasználót a '/todos/showMyTodos' végpontra.</p>
+  
+  
+<b> Kategóriák lenyitása / becsukása Javascript-tel </b>
+ <h4> Érintett fájlok: </h4>
+  <ul>
+  <li> showMyTodos.njk </li>
+  <li> showMyTodos.js </li>
+  </ul>
+  
+  <h4> Működése: </h4>
+  <p> Amikor a felhasználó a saját ToDo-it megjelenítő oldalon egy kategória nevére kattint, úgy lenyithatja/becsukhatja az adott kategóriát, ha arra éppen nincs szüksége. Névre kattintáskor meghívódik a showMyTodos.js fájl kódja, mely megkapja az adott panelt, és megkeresi a hozzá tartozó lista elemeket. Ezeket kattintásra eltünteti, vagy megmutatja. </p>
+  
+  <code>
+  
+  $headings.on('click', function (e) {
+    const $ul = $(this).next()
+    $ul.slideToggle()
+});
+  </code>
 
 
 
