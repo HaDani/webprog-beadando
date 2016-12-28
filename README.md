@@ -453,6 +453,7 @@ A tesztesetek:
  - slideCategories:
    Kategóriák elrejtése, megjelenítése
 
+A tesztesetek a tests mappábban találhatóak.
 
 
 <
