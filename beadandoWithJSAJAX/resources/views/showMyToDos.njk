@@ -1,0 +1,83 @@
+{% extends 'layout' %}
+
+
+{% block scripts %}
+<script src="/scripts/showMyToDos.js"></script>
+
+<script src="/scripts/popup_profile.js"></script>
+{% endblock %}
+
+{% block content %}
+ {{ csrfField }}
+<div class="row">
+  {% for category in newCats %}
+
+  <div class="col-md-3 col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading" style="text-align:center; ">
+        {{ category.name }}
+      </div>
+      <ul class="list-group">
+        {% for todo in category.topTodos %}
+        {% if todo.user_id == currentUser.id %}
+        <li class="list-group-item">
+        <table>
+        <td width="100%">
+          <a href="/todos/{{ todo.id }}">
+            {{ todo.name }}
+          </a>
+        </td>
+        <td style="padding-right: 15px">
+          <a href="/todos/{{ todo.id }}/modify">
+            Módosít
+          </a>
+        </td>
+        <td>
+          <a href="/todos/{{ todo.id }}/delete">
+            Kész
+          </a>
+        </td>
+        </table>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  {% endfor %}
+  
+  <div class="col-md-3 col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading" style="text-align:center; ">
+        Megosztott
+      </div>
+      <ul class="list-group">
+        {% for todo in sharedToDos %}
+        <li class="list-group-item">
+        <table>
+        <td width="100%">
+          <a href="/todos/{{ todo.todo_id }}">
+            {{ todo.todo_name }}
+          </a>
+        </td>
+        </table>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  
+  
+</div>
+
+<div style="padding:auto; margin:auto; text-align:center;">
+  <table style="padding:auto; margin:auto; text-align:center;">
+    <tr>
+      <td style="padding: 30px">
+        <a href="/todos/create" class="btn btn-success">Új ToDo</a>
+      </td>
+    </tr>
+  </table>
+</div>
+{% endblock %}

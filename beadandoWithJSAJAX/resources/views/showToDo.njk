@@ -1,0 +1,140 @@
+{% extends 'layout' %}
+
+
+{% block scripts %}
+
+  <script src="/scripts/todoDelete.js"></script>
+  <script src="/scripts/modify_todo.js"></script>
+  <script src="/scripts/popup_comment.js"></script>
+{% endblock %}
+
+{% block content %}
+
+ {{ csrfField }}
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Név</h3>
+  </div>
+  <div class="panel-body">
+    <h4 id="todoName">{{ todo.name }}</h4>
+  </div>
+</div>
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+    <h3 class="panel-title">Kategória</h3>
+  </div>
+  <div class="panel-body">
+    <h4 id="todoCatName">{{ todo.category.name }}</h4>
+  </div>
+</div>
+
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Leírás</h3>
+  </div>
+  <div class="panel-body">
+    <h4 id="todoDesc">{{ todo.description }}</h4>
+  </div>
+</div>
+
+<div class="panel panel-danger">
+  <div class="panel-heading">
+    <h3 class="panel-title">Határidő</h3>
+  </div>
+  <div class="panel-body">
+    {% if todo.day_date < 10 and todo.month_date < 10 and todo.year_date >= 2016 %}
+    <h4 id="todoDate">{{ todo.year_date }}.0{{ todo.month_date }}.0{{ todo.day_date }} </h4>
+    {% elif todo.day_date < 10 and todo.year_date >= 2016%}
+    <h4 id="todoDate">{{ todo.year_date }}.{{ todo.month_date }}.0{{ todo.day_date }} </h4>
+    {% elif todo.month_date < 10  and todo.year_date >= 2016 %}
+    <h4 id="todoDate">{{ todo.year_date }}.0{{ todo.month_date }}.{{ todo.day_date }} </h4>
+    {% elif todo.day_date > 0  and todo.month_date > 0 and todo.year_date >= 2016 %}
+    <h4 id="todoDate">{{ todo.year_date }}.{{ todo.month_date }}.{{ todo.day_date }} </h4>
+    {% else %}
+    <h4></h4>
+    
+    {% endif %}
+  </div>
+</div>
+
+  <div style="padding:auto; margin:auto; text-align:center;">
+    <table style="padding:auto; margin:auto; text-align:center;">
+    
+      <td style="padding:10px; width:33%">
+        <a href="/todos/{{ todo.id }}/addNewMember" class="btn btn-success" style="width:100%">Tag hozzáadása</a>
+      </td>
+     <td style="padding:10px; width:33%">
+        <a href="/todos/{{ todo.id }}/modify" class="btn btn-success" style="width:100%"  id="btnModifyToDo">Módosítás</a>
+      </td>
+      <td style="padding:10px; width:33%">
+        <a href="/todos/{{ todo.id }}/delete" class="btn btn-success" style="width:100%" id="btnDelete">Kész</a>
+      </td>
+    </table>
+  </div>
+
+  <br>
+
+  <div class="panel panel-danger">
+  <div style="padding:auto; margin:auto; text-align:center;">
+  <table style="width:100%; align:left" id="commentTable">
+    <tr>
+      <td style="width:90%; align:left">
+        <h3> Megjegyzések </h3>
+      </td>
+            
+      <td style="">
+        <a href="/todos/{{ todo.id }}/comment" class="btn btn-success" style="" >Új megjegyzés</a>
+       
+      </td>
+      <td>
+       <a href="/todos/{{ todo.id }}/comment" class="btn btn-success" style="" id="btnComment">Új megjegyzés (Saját)</a>
+       </td>
+    </tr>
+  </table>
+      </div>
+    <table class="table table-striped table-hover ">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Komment</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      {% for comment in comments %}
+        <tr>
+          <td style="width:10%">
+            {{ comment.id }}.
+          </td>
+          <td>
+            {{ comment.text }}
+          </td>
+          
+           <td style="width:5%">
+            <a href="/comments/{{comment.id}}/modify"> Szerkeszt </a>
+          </td>
+           <td style="width:5%">
+            <a href="/comments/{{comment.id}}/delete" > Törlés </a>
+          </td>
+      {% endfor %}
+      </tbody>
+    </table>
+
+
+<div class="modal fade confirm-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+        <div class="modal-body">
+            Biztosan törölni szeretnéd?
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-success modal-ok" data-dismiss="modal">OK</button>
+            <button type="button" class="btn btn-danger modal-cancel" data-dismiss="modal">Mégse</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

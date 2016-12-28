@@ -1,0 +1,58 @@
+{% extends 'layout' %}
+
+{% block scripts %}
+  <script src="/scripts/popup_login.js"></script>
+{% endblock %}
+
+{% block content %}
+
+
+<div style="padding:auto; margin:auto; text-align:center;">
+  <h1> Üdvözöljük! </h1>
+
+  <h3> ToDoToDo egy ToDo alkalmazás mely segít Önnek abban, hogy semmit se felejtsen el! </h3>
+  <br>
+  <div class="panel panel-info" style="padding:auto; margin:auto; text-align:center; width:80%;">
+
+  <div class="list-group">
+  <a href="#" class="list-group-item active">
+    Funkciók
+  </a>
+  <a href="#" class="list-group-item">Adjon hozzá tevékenységeket
+  </a>
+  <a href="#" class="list-group-item">Legyen szó akár bevásárlásról, feladatokról!
+  </a>
+  <a href="#" class="list-group-item">Rendezze kategóriákba feladatait!
+  </a>
+  <a href="#" class="list-group-item">Bejelentkezés után azonnal használhatja!
+  </a>
+</div>
+  </div>
+
+<br>
+<br>
+
+<div style="padding:auto; margin:auto; text-align:center;">
+<table  style="margin-left: auto;
+    margin-right: auto;">
+<td style="padding:30px">
+  <div style="padding:auto; margin:auto; text-align:center;">
+    <a href="/login" class="btn btn-success" id="btnLogin">Bejelentkezés</a>
+  </div>
+ </td>
+ <td>
+   <div style="padding:auto; margin:auto; text-align:center;">
+    <a href="/register" class="btn btn-success">Regisztráció</a>
+  </div>
+   </td>
+</table>
+</div>
+
+{% endblock %}
+
+
+
+
+
+      
+        
