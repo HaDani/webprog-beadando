@@ -403,7 +403,8 @@
   <p> A ToDo kiválasztása után a megtekintéskor a Kész gombra (id: btnDelete) kattintva a felhasználó egy popup ablakban megerősítheti, hogy törölni szeretné a ToDo-t. Amennyiben szeretné, úgy lefut egy ajax kérés a megfelő végpontra (<code>'/ajax' + $(this).attr('href')</code>), meghívódik a ToDoController.js - ajaxDelete metódusa, mely törli a ToDo-t. Ha sikeres volt a törlés, akkor a felhasználót visszairányítja a saját ToDo-ihoz. </p>
   
   
-    <b> ToDo megjegyzés írása AJAX-szal</b>
+ <b> ToDo megjegyzés írása AJAX-szal</b>
+    
  <h4> Érintett fájlok: </h4>
   <ul>
   <li> showToDo.njk </li>
