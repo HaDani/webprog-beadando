@@ -454,6 +454,9 @@ A tesztesetek:
  - slideCategories:
    Kategóriák elrejtése, megjelenítése
 
+A 3. beadandót a <b>beadandoWithJSAJAX</b> mappába töltöttem fel.
+
+
 A tesztesetek a tests mappábban találhatóak.
 
 
